@@ -1,6 +1,6 @@
 # ChatGPT Memory
 
-Allows to scale the ChatGPT API to multiple simultaneous sessions with infinite contextual and adaptive memory powered by GPT and Redis datastore. This can be visualized as follows
+It will hopefully allow to scale the ChatGPT API to multiple simultaneous sessions with infinite contextual and adaptive memory powered by GPT-4 and Redis datastore at some point. This can be visualized as follows
 
 <p  align="center">
 <br>
@@ -19,7 +19,7 @@ poetry install
 ```
 
 ### Use with UI
-<img width="1217" alt="Screenshot 2023-04-17 at 10 26 59 PM" src="https://user-images.githubusercontent.com/6007894/232608443-054e47e6-6057-4583-9d92-205843a260c8.png">
+<img width="1217" alt="Screenshot Di 10 Okt 2023 00:12:47 CEST" src="https://user-images.githubusercontent.com/34459740/273710842-aeb14624-96ab-4c7c-b255-96a1b302284e.png">
 
 
 
