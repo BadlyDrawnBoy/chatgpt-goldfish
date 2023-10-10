@@ -1,4 +1,4 @@
-# ChatGPT Memory
+# ChatGPT Goldfish
 
 It will hopefully allow to scale the ChatGPT API to multiple simultaneous sessions with infinite contextual and adaptive memory powered by GPT-4 and Redis datastore at some point. This can be visualized as follows
 
