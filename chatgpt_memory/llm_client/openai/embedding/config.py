@@ -16,4 +16,4 @@ class EmbeddingConfig(LLMClientConfig):
     progress_bar: bool = False
     model: str = EmbeddingModels.ada.value
     max_seq_len: int = 8191
-    use_tiktoken: bool = False
+    use_tiktoken: bool = True

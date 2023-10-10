@@ -1,12 +1,7 @@
 import logging
 import uuid
 
-# from langchain import LLMChain, OpenAI, PromptTemplate
-from langchain.chains import LLMChain
-from langchain.prompts import PromptTemplate
-from langchain.llms import OpenAI
-from langchain.chat_models import ChatOpenAI
-
+from langchain import LLMChain, OpenAI, PromptTemplate
 from pydantic import BaseModel
 
 from chatgpt_memory.llm_client.llm_client import LLMClient
@@ -33,7 +28,7 @@ class ChatGPTClient(LLMClient):
         super().__init__(config=config)
         prompt = PromptTemplate(input_variables=["prompt"], template="{prompt}")
         self.chatgpt_chain = LLMChain(
-            llm=ChatOpenAI(
+            llm=OpenAI(
                 temperature=config.temperature,
                 openai_api_key=self.api_key,
                 model_name=config.model_name,
@@ -43,7 +38,6 @@ class ChatGPTClient(LLMClient):
             prompt=prompt,
             verbose=config.verbose,
         )
-        print("LLMChain initialized:", self.chatgpt_chain)
         self.memory_manager = memory_manager
 
     def converse(self, message: str, conversation_id: str = None) -> ChatGPTResponse:
