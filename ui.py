@@ -10,7 +10,7 @@ import streamlit as st
 from chatgpt_memory.environment import OPENAI_API_KEY, REDIS_HOST, REDIS_PASSWORD, REDIS_PORT
 
 # Set Streamlit page configuration
-st.set_page_config(page_title="🧠MemoryBot🤖", layout="wide")
+st.set_page_config(page_title="🐡GoldfishBot🤖", layout="wide")
 # Initialize session states
 if "generated" not in st.session_state:
     st.session_state["generated"] = []
@@ -36,7 +36,7 @@ def get_text():
         "You: ",
         st.session_state["input"],
         key="input",
-        placeholder="Your AI assistant here! Ask me anything ...",
+        placeholder="Your goldfish here! Try to ask me anything ...",
         label_visibility="hidden",
         on_change=send_text,
     )
@@ -77,8 +77,8 @@ def new_chat():
 
 
 # Set up the Streamlit app layout
-st.title("🤖 Chat Bot with 🧠")
-st.subheader(" Powered by ChatGPT Memory + Redis Search")
+st.title("🤖 Chat Bot with 🐡")
+st.subheader(" Powered by ChatGPT Goldfish + Redis Search")
 
 
 # Session state storage would be ideal
@@ -102,7 +102,7 @@ download_str = []
 with st.expander("Conversation", expanded=True):
     for i in range(len(st.session_state["generated"]) - 1, -1, -1):
         st.info(st.session_state["past"][i], icon="🧐")
-        st.success(st.session_state["generated"][i], icon="🤖")
+        st.success(st.session_state["generated"][i], icon="🐡")
         download_str.append(st.session_state["past"][i])
         download_str.append(st.session_state["generated"][i])
 
